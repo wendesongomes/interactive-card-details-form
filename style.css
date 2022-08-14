@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Space Grotesk', sans-serif;
+    color: hsl(278, 68%, 11%);
+}
+
+body{
+    display: flex;
+    background-image: url(images/bg-main-desktop.png);
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    overflow-y: none;
+}
+
+main{
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+main section form label{
+    text-transform: uppercase;
+    margin-top: 1.4em;
+    font-size: 0.9rem;
+}
+
+main section form input{
+    border-radius: 10px;
+    border-color: hsl(270, 3%, 87%);
+    border-style: solid;
+    padding: 1em;
+    margin-top: 0.4em;
+    appearance: none;
+}
+
+main section form input:focus{
+    outline-color: hsl(249, 99%, 64%);
+}
+
+main section form input::placeholder{
+    color: hsl(270, 3%, 87%);
+}
+
+
+button{
+    margin-top: 2rem;
+    background-color: hsl(278, 68%, 11%);
+    border-radius: 10px;
+    color: white;
+    height: 4em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border: none;
+}
+
+button:hover{
+    background-color: hsl(278, 66%, 25%);
+}
+
+#container-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30vw;
+}
+
+#container-card .card-Front{
+    margin-right: 5em;
+    background-image: url(images/bg-card-front.png);
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+#container-card .card-Front, .card-Back{
+    background-repeat: no-repeat;
+    background-size: 100%  100%;
+    width: 95%;
+    height: calc(95vw / 6);
+}
+
+#container-card .card-Front .card-front-bottom{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+#container-card .card-Front img{
+    width: calc(50vw / 11);
+    margin-left: calc(100vw / 50);
+}
+
+#container-card .card-Front #card-number{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: calc(20vw / 11);
+    color: white;
+    letter-spacing: 0.1em;
+    padding-top: 2em;
+    width: 100%;
+}
+
+#container-card .card-Front #card-name{
+    display: flex;
+    color: white;
+    font-size: calc(20vw / 20);
+    text-transform: uppercase;
+    width: 55%;
+}
+
+#container-card .card-Front .card-date{
+    display: flex;
+    font-size: calc(20vw / 20);
+}
+
+#container-card .card-Front .date{
+    color: white;
+}
+
+#container-card .card-Back{
+    margin-top: 1em;
+    margin-left: 5em;
+    background-image: url(images/bg-card-back.png);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 4em;
+}
+
+#container-card .card-Back #card-cvc{
+    margin-bottom: 0.2em;
+    font-size: calc(50vw / 50);
+    color: white;
+    letter-spacing: 0.1em;
+}
+
+#container-finish{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#container-finish p{
+    margin-top: 1em;
+}
+
+#container-finish #thanks{
+    font-size: 2em;
+    text-transform: uppercase;
+}
+
+#container-finish #thanks-details{
+    color: hsl(279, 6%, 55%);
+}
+
+main #container-form form p{
+    font-size: 13px;
+    color: hsl(0, 100%, 66%);
+    margin-top: 0.4em;
+}
+
+#container-form{
+    display: flex;
+    flex-direction: column;
+    width: 25vw;
+}
+
+#container-form .info{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#container-form .info-card{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#container-form .info-card .info-date, .info-cvc{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+
+#container-form .info-card .month-day{
+    display: flex;
+}
+
+#container-form .info-card .month-day input{
+    margin-right: 1em;
+    width: 40%;
+
+}
+
+@media only screen and (max-width: 1100px){
+
+    body{
+        background-image: url(images/bg-main-mobile.png);
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-size: 100% 30%;
+    }
+
+    main{
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    #container-form{
+        width: 80vw;
+        min-width: 70vw;
+        height: 50vh;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    #container-card{
+        height: 45vh;
+    }
+
+    #container-card .card-Front, .card-Back{
+        width: 75vw;
+        height: calc(80vw / 2);
+        max-width: 300px;
+        max-height: 170px;
+    }
+
+    #container-card .card-Front{
+        position: relative;
+        top: 140px;
+        z-index: 1;
+    }
+
+    #container-card .card-Front img{
+        width: 60px;
+    }
+
+    #container-card .card-Front #card-name{
+        font-size: 12px;
+    }
+
+    #container-card .card-Front .card-date{
+        font-size: 12px;
+    }
+
+    #container-card .card-Front #card-number{
+        font-size: 18px;
+    }
+    
+    #container-card .card-Back{
+        position: relative;
+        bottom: 134px;
+        padding: 2em;
+    }
+
+    #container-card .card-Back #card-cvc{
+        font-size: 15px;
+    }
+
+}
+

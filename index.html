@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive card details form</title>
+</head>
+<body>
+  <main>
+
+    <section id="container-card">
+      <div class="card-Front">
+        <img src="images/card-logo.svg" alt="">
+        <p id="card-number">0000 0000 0000 0000</p>
+        <div class="card-front-bottom">
+          <p id="card-name">Jane Appleseed</p>
+          <div class="card-date">
+            <p class="date" id="card-date-MM"\>00</p>
+            <p class="date">/</p>
+            <p class="date"id="card-date-YY">00</p>
+          </div>
+        </div>
+      </div>
+      <div class="card-Back">
+        <p id="card-cvc">000</p>
+      </div>
+    </section>
+
+    <section id="container-form">
+      <div id="container-finish">
+        <img id="img-finish" alt="">
+        <p id="thanks"></p>
+        <p id="thanks-details"></p>
+      </div>
+      <form action="" id="form">
+        <div class="info">
+          <label for="fName">cardholder name</label>
+          <input required type="text" onkeyup="modify()" id="fName" name="fName" placeholder="e.g Jane Appleseed">
+          <p class="details-name"></p>
+          <label for="fCardName">card number</label>
+          <input required type="text" onkeyup="modify()" maxlength="19" onkeypress='return formats(this,event)' id="fNumber" name="fName" placeholder="e.g 1234 5678 9123 0000">
+          <p class="details-number-card"></p>
+        </div>
+        <div class="info-card">
+          <div class="info-date">
+            <label for="fDate">Exp. Date (mm/yy)</label>
+            <div class="month-day">
+              <input required type="text" required onkeyup="modify()" inputmode="numeric" id="fMonth" name="fMonth" placeholder="MM" maxlength="2">
+              <input required type="text" required onkeyup="modify()" id="fDay" name="fDay" placeholder="YY"git maxlength="2">
+            </div>
+            <p class="details-date"></p>
+          </div>
+          <div class="info-cvc">
+            <label for="fCvc">cvc</label>
+            <input required type="text" onkeyup="modify()" id="fCvc" name="fCvc" placeholder="e.g 123" maxlength="3">
+            <p class="details-cvc"></p>
+          </div>
+        </div>
+      </form>
+      <input type="submit" id="btn" onclick="confirm()" value="Confirm"></input>
+    </section>
+    
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

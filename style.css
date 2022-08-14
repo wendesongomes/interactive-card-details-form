@@ -50,7 +50,7 @@ main section form input::placeholder{
 }
 
 
-button{
+#btn{
     margin-top: 2rem;
     background-color: hsl(278, 68%, 11%);
     border-radius: 10px;
@@ -61,7 +61,7 @@ button{
     border: none;
 }
 
-button:hover{
+#btn:hover{
     background-color: hsl(278, 66%, 25%);
 }
 
@@ -203,8 +203,8 @@ main #container-form form p{
 #container-form .info-card .month-day input{
     margin-right: 1em;
     width: 40%;
-
 }
+
 
 @media only screen and (max-width: 1100px){
 
@@ -227,9 +227,12 @@ main #container-form form p{
     #container-form{
         width: 80vw;
         min-width: 70vw;
-        height: 50vh;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
+    }
+
+    #container-form #container-finish{
+        position: absolute;
     }
 
     #container-card{
